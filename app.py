@@ -1,14 +1,12 @@
 import os
 from datetime import datetime
 import streamlit as st
-from dotenv import load_dotenv
 
 from db import init_db, get_conn
 from pricing_provider_cse import fetch_last_price
 from alerts import check_and_alert
 from telegram_notifier import send_telegram
 
-load_dotenv()
 init_db()
 
 st.set_page_config(page_title="Suivi BVC - Watchlist", layout="wide")
