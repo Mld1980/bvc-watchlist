@@ -1,6 +1,8 @@
 import os
 from datetime import datetime
 import streamlit as st
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 from db import init_db, get_conn
 from pricing_provider_cse import fetch_last_price
